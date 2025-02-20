@@ -24,3 +24,41 @@ img {
     margin: 20px auto;
     border-radius: 10px;
 }
+/* Separation line*/
+.separator {
+    width: 100%; /* Full-width line */
+    height: 2px; /* Thickness of the line */
+    background-color: rgb(176, 168, 168); /* Line color */
+    margin: 10 0; /* Space above and below */
+}
+/* Style the words container */
+.words {
+    display: flex;
+    justify-content: center; /* Center the words horizontally */
+    gap: 20px; /* Space between words */
+    font-size: 15px;
+    font-weight: 600;
+    color: black;
+    margin-top: 15px;
+}
+/* Bio Section Styling */
+.bio {
+    max-width: 800px;
+    margin: 20px auto;
+    text-align: justify;
+    font-size: 14px;
+    line-height: 1.6;
+    color: #333;
+}
+
+/* Style Paragraphs for Better Readability */
+.bio p {
+    margin-bottom: 15px;
+}
+
+/* Make It Responsive for Mobile */
+@media (max-width: 600px) {
+    .bio {
+        padding: 0 20px;
+    }
+}

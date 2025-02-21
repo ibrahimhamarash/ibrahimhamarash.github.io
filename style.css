@@ -35,7 +35,7 @@ img {
 .words {
     display: flex;
     justify-content: center; /* Center the words horizontally */
-    gap: 20px; /* Space between words */
+    gap: 15px; /* Space between words */
     font-size: 15px;
     font-weight: 600;
     color: black;
@@ -43,7 +43,7 @@ img {
 }
 /* Bio Section Styling */
 .bio {
-    max-width: 800px;
+    max-width: 100%;
     margin: 20px auto;
     text-align: justify;
     font-size: 14px;

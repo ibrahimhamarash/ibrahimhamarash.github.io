@@ -4,7 +4,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>My Website</title>
-
     <!-- Link to External CSS File -->
     <link rel="stylesheet" href="style.css"><div class=""></div>
 </head>
@@ -16,28 +15,26 @@
         <!--<p>My Academic Space</p> -->
         <!-- Words displayed horizontally -->
         <div class="words">
-            <span>Profile</span>
-            <span>Projects</span>
-            <span>Courses</span>
-            <span>Publications</span>
-            <span>Media</span>
+            <a href="profile.html">Profile</a>
+            <a href="projects.html">Projects</a>
+            <a href="courses.html">Courses</a>
+            <a href="publications.html">Publications</a>
+            <a href="media.html">Media</a>
         </div>
          <!-- Bio Section -->
          <div class="bio">
-            <p>With a career spanning academia, industry, and research, I have dedicated my work to advancing Electrical and Computer Engineering, fostering innovation, and mentoring future engineers. I currently serve as a professor at Salahaddin University-Erbil and an adjunct professor at the University of Kurdistan Hewler.</p>
-
-            <p>My academic journey includes a BSc in Electronics and Communication Engineering from Salahaddin University, an MSc in Control Systems Engineering from Mosul University, an MRes in Computing Sciences from Staffordshire University (UK), and a PhD in Control Systems Engineering from The University of Technology. Additionally, I obtained an ICT Project Management certificate from UCSD (USA) and completed a postdoctoral fellowship at Monash University, Australia, where I was honored with the Endeavour Medal from the Australian Government.</p>
-
-            <p>My research focuses on control systems, AI, renewable energy, and software engineering, with over 60 published papers in leading journals. I have authored three books, including <em>National Computer Dictionary (English-Kurdish)</em>. I have also supervised more than 40 MSc and 8 PhD students including collaborations with the University of Florida and Czech Technical University in Prague.</p>
-
-            <p>Beyond academia, I have played a key role in establishing research and innovation centers. I co-founded the <Mobile Education Centre for Regeneration Energy and Automation (MECREA) in collaboration with Karlsruhe University for Applied Science (Germany) and established the Erbil Centre for Sustainable Development, supporting major projects in the Kurdistan Region.</p>
-
-            <p>I have held academic leadership roles, including founder and head of Iraq’s first Software Engineering Department at Salahaddin University, head of the Electrical Engineering Department, vice president for scientific affairs and postgraduate studies, and dean of the Engineering College at Salahaddin University. Between 2003 and 2010, I worked as a software architect and designer for the UK software company B-Plan Information Systems, specializing in enterprise software solutions.</p>
-
-            <p>My research and development efforts have been supported by grants from NSF (USA), DelPhi (UK), IRIS (USA), UNESCO, IEEE, DAAD (Germany), and the Australian Endeavour Program.</p>
-
-            <p>In addition to research and teaching, I have served as Editor-in-Chief of <em>Zanko Journal for Pure and Applied Sciences</em>, chaired several local and international conferences, and delivered keynote speeches at numerous academic and industry events. As a senior member of IEEE, I remain actively involved in shaping the future of technology and engineering education.</p>
-        </div>
+            <p>With a career spanning academia, industry, and research, I have dedicated my work to advancing Electrical, Computer, and Software Engineering, fostering innovation, and mentoring future engineers. I currently serve as a professor at Salahaddin University-Erbil and an adjunct professor at the University of Kurdistan Hewler.</p>
+            <p>For a detailed profile, please visit the <a href="profile.html"><strong>Profile Page</strong></a>.</p>
+         </div>
+            
     </div>
+    <footer class="footer">
+        <p>© <span id="year"></span> Ibrahim Ismael Hamarash.</p>
+    </footer>
+    
+    <!-- JavaScript to Auto-Update Year -->
+    <script>
+        document.getElementById("year").textContent = new Date().getFullYear();
+    </script>
 </body>
 </html>

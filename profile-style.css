@@ -63,3 +63,15 @@ img {
         padding: 0 20px;
     }
 }
+h2 {
+    font-size: 16px; /* Change the size */
+    font-weight: bold; /* Make it bold */
+    color: #333; /* Set text color */
+    text-align: left; /* Center text (optional) */
+    margin-bottom: 15px; /* Add spacing below */
+}
+@media (max-width: 600px) {
+    h2 {
+        font-size: 20px; /* Reduce size on small screens */
+    }
+}

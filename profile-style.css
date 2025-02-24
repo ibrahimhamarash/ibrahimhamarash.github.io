@@ -75,12 +75,19 @@ h2 {
         font-size: 20px; /* Reduce size on small screens */
     }
 }
+.footer {
+    text-align: center;
+    font-size: 16px;
+    color: #666;
+    padding: 10px 0;
+    background-color: #f4f4f4;
+}
 .back-home {
     display: block;
     text-align: center;
     font-size: 18px;
     font-weight: bold;
-    color: #0555ab; /* Bootstrap Blue */
+    color: #0c76e7; /* Bootstrap Blue */
     text-decoration: none;
     margin-top: 20px;
 }

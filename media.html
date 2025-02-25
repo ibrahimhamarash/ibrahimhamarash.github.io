@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Media - Ibrahim Hamarash</title>
+    <link rel="stylesheet" href="profile-style.css">
+    <style>
+        .highlighted-text {
+            font-family: Comic Sans MS; /* Example Handwriting Font */
+            font-size: 16px; /* Adjust size */
+            color: #464343; /* Adjust color */
+            text-align:center;
+        }
+    </style> 
+</head>
+<body>
+    <div class="container">
+        <img src="images/Dr-Ibrahim-hamarash.jpg" alt="Ibrahim Hamarash, Professor of Electrical and Computer Engineering">
+        <h1 class="highlighted-text">Professor Ibrahim Ismael Hamarash</h1>
+        <h2 class="highlighted-text" >Media & Public Engagement</h2>
+        <div class="separator"></div> <!-- Custom horizontal line -->
+        <!-- Words displayed horizontally -->
+        <div class="words">
+            <a href="profile.html">Profile</a>
+            <a href="industry.html">Industry</a>
+            <a href="courses.html">Courses</a>
+            <a href="publications.html">Publications</a>
+            <a href="media.html">Media</a>
+        </div>
+
+        <div class="video-gallery">
+            <a href="https://www.youtube.com/watch?v=CrPis99RL6c" target="_blank">
+                <img src="https://img.youtube.com/vi/CrPis99RL6c/hqdefault.jpg" alt="YouTube Video 1">
+            </a>
+            <a href="https://www.youtube.com/watch?v=V5sEXejpvK0" target="_blank">
+                <img src="https://img.youtube.com/vi/V5sEXejpvK0/hqdefault.jpg" alt="YouTube Video 2">
+            </a>
+            <a href="https://www.youtube.com/watch?v=fS-D7NO8VC8&t=969s" target="_blank">
+                <img src="https://img.youtube.com/vi/fS-D7NO8VC8/hqdefault.jpg" alt="YouTube Video 3">
+            </a>
+            <a href="https://www.youtube.com/watch?v=iB3mhzAeQ2c" target="_blank">
+                <img src="https://img.youtube.com/vi/iB3mhzAeQ2c/hqdefault.jpg" alt="YouTube Video 4">
+            </a>
+        </div>
+
+        <a href="index.html" class="back-home">← Back to Home</a>
+    </div>
+
+    <footer class="footer">
+        <p>© <span id="year"></span> Ibrahim Ismael Hamarash.</p>
+    </footer>
+
+    <script>
+        document.getElementById("year").textContent = new Date().getFullYear();
+    </script>
+</body>
+</html>

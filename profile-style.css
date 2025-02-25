@@ -105,3 +105,21 @@ h2 {
 .back-home:hover {
     text-decoration: underline;
 }
+.video-gallery {
+    display: flex;
+    gap: 5px;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: 20px;
+}
+
+.video-gallery img {
+    width: 100%; /* Adjust thumbnail size */
+    height: auto;
+    border-radius: 8px;
+    transition: transform 0.3s ease;
+}
+
+.video-gallery img:hover {
+    transform: scale(1.1); /* Zoom effect on hover */
+}

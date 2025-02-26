@@ -39,15 +39,22 @@ img {
 }
 /* Style for Hamburger Button */
 .hamburger-menu {
+    position: absolute;
+    top: 20px; /* Adjust to move up/down */
+    left: 20px; /* Adjust to move left/right */
     font-size: 24px;
-    background: none;
+    background: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+    color: white;
     border: none;
     cursor: pointer;
-    color: #333; /* Change color as needed */
-    padding: 10px;
-    display: block; /* Ensure it appears */
+    padding: 10px 15px;
+    border-radius: 5px;
+    z-index: 10; /* Ensure it stays above the image */
 }
-
+/* Ensure the container is positioned properly */
+.container {
+    position: relative;
+}
 /* Style for Navigation Menu */
 .menu {
     display: none; /* Hide menu initially */
@@ -58,6 +65,7 @@ img {
     left: 0;
     width: 100%;
     text-align: center;
+    z-index: 9;
 }
 
 /* Style for Menu Links */

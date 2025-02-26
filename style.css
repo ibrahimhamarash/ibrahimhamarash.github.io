@@ -11,6 +11,19 @@ body {
     flex-direction: column;
     min-height: 100vh;
 }
+/* Change h1 Font Size */
+h1 {
+    font-size: 24px; /* Adjust the size as needed */
+    font-weight: bold;
+    color: #333; /* Text color */
+}
+
+/* Change h2 Font Size */
+h2 {
+    font-size: 24px; /* Adjust the size */
+    font-weight: bold;
+    color: #555; /* Slightly lighter color */
+}
 
 /* Container for content */
 .container {
@@ -24,7 +37,7 @@ body {
 
 /* Image Styling */
 img {
-    max-width: 100%;
+    max-width: 50%;
     height: auto;
     display: block;
     margin: 20px auto;
@@ -77,7 +90,9 @@ img {
 }
 
 .menu a:hover {
-    background-color: #555;
+    color: #253dab; /* Change text color */
+    text-decoration: underline; /* Add underline */
+    background-color: transparent; /* Keep background unchanged */
 }
 
 /* Show menu in desktop view */
@@ -122,10 +137,10 @@ img {
 }
 .cv-link {
     display: inline-block;
-    background-color: #0073e6;
+    background-color: #0658aa;
     color: white;
-    padding: 10px 15px;
-    font-size: 18px;
+    padding: 3px 8px;
+    font-size: 14px;
     font-weight: bold;
     text-decoration: none;
     border-radius: 5px;

@@ -6,12 +6,12 @@ body {
     margin: 0;
     padding: 20px;
     background-color: #f4f4f4;
-
+}
 /* Ensuring the footer stays at the bottom */
 display: flex;
 flex-direction: column;
 min-height: 100vh;
-}
+
 /* Container for content */
 .container {
     max-width: 800px;
@@ -106,20 +106,35 @@ h2 {
     text-decoration: underline;
 }
 .video-gallery {
-    display: flex;
-    gap: 5px;
+    display: grid;
+    grid-template-columns: repeat(2, minmax(150px, 1fr)); /* Two columns */
+    gap: 0px !important; /* Minimal spacing between thumbnails */
     justify-content: center;
-    flex-wrap: wrap;
-    margin-top: 20px;
+    align-items: center;
+    margin-top: 10px;
+    padding: 0; /* Remove any extra padding */
+}
+
+.video-gallery a {
+    display: block; /* Ensures each video takes up only its grid space */
+    margin: 0 !important; /* Remove unwanted margins */
+    padding: 0;
 }
 
 .video-gallery img {
-    width: 100%; /* Adjust thumbnail size */
+    width: 100%;
     height: auto;
     border-radius: 8px;
     transition: transform 0.3s ease;
 }
 
 .video-gallery img:hover {
-    transform: scale(1.1); /* Zoom effect on hover */
+    transform: scale(1.05);
+}
+
+/* Make it responsive for mobile */
+@media (max-width: 600px) {
+    .video-gallery {
+        grid-template-columns: 1fr; /* Stack videos in one column on small screens */
+    }
 }

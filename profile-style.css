@@ -40,7 +40,7 @@ img {
 /* Style the words container */
 .words {
     display: flex;
-    flex-wrap: wrap;
+
     justify-content: center; /* Center the words horizontally */
     gap: 15px; /* Space between words */
     font-size: 15px;

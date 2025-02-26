@@ -47,11 +47,6 @@ img {
     font-weight: 600;
     color: black;
     margin-top: 15px;
-}
-.words a {
-    text-decoration: none;
-    padding: 5px 10px;
-}
 /* Bio Section Styling */
 .bio {
     max-width: 800;

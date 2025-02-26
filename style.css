@@ -7,9 +7,9 @@ body {
     padding: 20px;
     background-color: #f4f4f4;
     /* Ensuring the footer stays at the bottom */
-display: flex;
-flex-direction: column;
-min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
 }
 
 /* Container for content */
@@ -37,15 +37,59 @@ img {
     background-color: rgb(176, 168, 168); /* Line color */
     margin: 10 0; /* Space above and below */
 }
-/* Style the words container */
-.words {
-    display: flex;
-    justify-content: center; /* Center the words horizontally */
-    gap: 15px; /* Space between words */
-    font-size: 15px;
-    font-weight: 600;
-    color: black;
-    margin-top: 15px;
+/* Style for Hamburger Button */
+.hamburger-menu {
+    font-size: 24px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: #333; /* Change color as needed */
+    padding: 10px;
+    display: block; /* Ensure it appears */
+}
+
+/* Style for Navigation Menu */
+.menu {
+    display: none; /* Hide menu initially */
+    background-color: #333; /* Dark background */
+    padding: 10px;
+    position: absolute;
+    top: 50px;
+    left: 0;
+    width: 100%;
+    text-align: center;
+}
+
+/* Style for Menu Links */
+.menu a {
+    display: block;
+    color: white;
+    padding: 10px;
+    text-decoration: none;
+}
+
+.menu a:hover {
+    background-color: #555;
+}
+
+/* Show menu in desktop view */
+@media (min-width: 600px) {
+    .hamburger-menu {
+        display: none;
+    }
+
+    .menu {
+        display: block;
+        position: static;
+        background: none;
+        text-align: center;
+    }
+
+    .menu a {
+        display: inline-block;
+        padding: 10px;
+        color: #333;
+    }
 }
 /* Bio Section Styling */
 .bio {

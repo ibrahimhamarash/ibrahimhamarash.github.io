@@ -54,7 +54,7 @@ img {
 .hamburger-menu {
     position: absolute;
     top: 20px; /* Adjust to move up/down */
-    left: 20px; /* Adjust to move left/right */
+    right: 20px; /* Adjust to move left/right */
     font-size: 24px;
     background: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
     color: white;
@@ -68,22 +68,25 @@ img {
 .container {
     position: relative;
 }
-/* Style for Navigation Menu */
 .menu {
-    display: none; /* Hide menu initially */
-    background-color: #333; /* Dark background */
-    padding: 6px;
-    position: absolute;
-    top: 60px;
-    left: 0;
-    width: 100%;
-    text-align: left;
-    z-index: 9;
+    position: fixed;
+    top: 0;
+    right: -250px; /* Initially hidden */
+    width: 250px;
+    height: 100%;
+    background-color: #333;
+    padding-top: 60px;
+    transition: right 0.3s ease-in-out;
+}
+
+.menu.show {
+    right: 0; /* Slide in */
 }
 
 /* Style for Menu Links */
 .menu a {
     display: block;
+    text-align: right; /* Align menu items */
     color: white;
     padding: 10px;
     text-decoration: none;

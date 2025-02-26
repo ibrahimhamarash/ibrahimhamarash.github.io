@@ -45,11 +45,7 @@
     <script>
         function toggleMenu() {
             var menu = document.getElementById("mobileMenu");
-            if (menu.style.display === "block") {
-                menu.style.display = "none";
-            } else {
-                menu.style.display = "block";
-            }
+            menu.classList.toggle("show"); /* Adds or removes the "show" class */
         }
     </script>
 </body>

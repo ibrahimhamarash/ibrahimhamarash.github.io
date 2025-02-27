@@ -56,14 +56,13 @@ img {
     top: 15px;
     right: 15px;
     font-size: 28px;
-    background: rgba(108, 108, 108, 0.7);
+    background: rgba(0, 0, 0, 0.7);
     color: white;
     border: none;
     cursor: pointer;
     padding: 12px;
     border-radius: 8px;
-    z-index: 1000;
-    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+    z-index: 10000; /* ✅ Keep it above everything */
 }
 /* Ensure the container is positioned properly */
 .container {
@@ -106,17 +105,17 @@ img {
 /* ✅ Mobile View (max-width 600px) */
 @media (max-width: 600px) {
     .menu {
-        display: none; /* Hide initially */
+        display: none;
         position: fixed;
         top: 0;
         left: 0;
-        width: 100vw; /* Full screen width */
-        height: 100vh; /* Full screen height */
-        background-color: rgba(0, 0, 0, 0.7); /* Darker background */
+        width: 100vw;
+        height: 100vh;
+        background-color: rgba(0, 0, 0, 0.7);
         text-align: center;
         padding-top: 80px;
         margin: 0;
-        z-index: 9999;
+        z-index: 9999; /* ✅ Lower than hamburger-menu */
     }
 
     .menu.show {

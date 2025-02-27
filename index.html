@@ -44,8 +44,17 @@
     <script>
     function toggleMenu() {
         var menu = document.getElementById("mobileMenu");
-        menu.classList.toggle("show"); /* Adds or removes the "show" class */
+        menu.classList.toggle("show");
+
+        // ✅ Ensure the hamburger menu remains visible
+        var hamburger = document.querySelector(".hamburger-menu");
+        if (menu.classList.contains("show")) {
+            hamburger.style.zIndex = "10001"; /* Bring it above menu */
+        } else {
+            hamburger.style.zIndex = "10000"; /* Keep it high */
+        }
     }
+</script>
 </script>
 </body>
 </html>

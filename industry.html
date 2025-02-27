@@ -3,40 +3,52 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Industry - Ibrahim Hamarash</title>
-    <link rel="stylesheet" href="profile-style.css">
-    <style>
-        .highlighted-text {
-            font-family: Comic Sans MS; /* Example Handwriting Font */
-            font-size: 16px; /* Adjust size */
-            color: #464343; /* Adjust color */
-            text-align:center;
-        }
-    </style> 
+    <title>My Website</title>
+    <!-- Link to External CSS File -->
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <div class="container">
-        <img src="images/Dr-Ibrahim-hamarash.jpg" alt="Ibrahim Hamarash, Professor of Electrical and Computer Engineering">
-        <h1 class="highlighted-text">Professor Ibrahim Ismael Hamarash</h1>
-        <h2 class="highlighted-text" >Industrial Experience</h2>
+        <button class="hamburger-menu" onclick="toggleMenu()">☰</button>
+        <img src="images/Dr-Ibrahim-hamarash.jpg" alt="Ibrahim Hamarash, Professor of Electrical and Computer Engineering">        
+        <h1>Professor Ibrahim Ismael Hamarash</h1>
+        <h2>Industrial Experience</h2>
         <div class="separator"></div> <!-- Custom horizontal line -->
         <!-- Words displayed horizontally -->
-        <div class="words">
+        <!-- Hamburger Menu Button -->
+        <!-- Navigation Menu -->
+        <nav id="mobileMenu" class="menu">
             <a href="profile.html">Profile</a>
             <a href="industry.html">Industry</a>
             <a href="courses.html">Courses</a>
             <a href="publications.html">Publications</a>
             <a href="media.html">Media</a>
-        </div>
-        <a href="index.html" class="back-home">← Back to Home</a>
+        </nav>
+         
+            
     </div>
-
     <footer class="footer">
         <p>© <span id="year"></span> Ibrahim Ismael Hamarash.</p>
     </footer>
-
+    
+    <!-- JavaScript to Auto-Update Year -->
     <script>
         document.getElementById("year").textContent = new Date().getFullYear();
     </script>
+    <script>
+    function toggleMenu() {
+        var menu = document.getElementById("mobileMenu");
+        menu.classList.toggle("show");
+
+        // ✅ Ensure the hamburger menu remains visible
+        var hamburger = document.querySelector(".hamburger-menu");
+        if (menu.classList.contains("show")) {
+            hamburger.style.zIndex = "10001"; /* Bring it above menu */
+        } else {
+            hamburger.style.zIndex = "10000"; /* Keep it high */
+        }
+    }
+</script>
+</script>
 </body>
 </html>

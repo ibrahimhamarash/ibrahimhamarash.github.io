@@ -88,8 +88,8 @@ h2 {
     background-color: #f4f4f4;
 }
 .back-home {
-    display: block;
-    text-align: center;
+    display: flex;
+    text-align: center !important;
     font-size: 18px;
     font-weight: bold;
     color: #0c76e7; /* Bootstrap Blue */

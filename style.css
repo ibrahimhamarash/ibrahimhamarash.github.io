@@ -48,21 +48,22 @@ img {
     width: 100%; /* Full-width line */
     height: 2px; /* Thickness of the line */
     background-color: rgb(176, 168, 168); /* Line color */
-    margin: 10 0; /* Space above and below */
+    margin: 10px 0; /* Space above and below */
 }
 /* Style for Hamburger Button */
 .hamburger-menu {
-    position: absolute;
-    top: 20px; /* Adjust to move up/down */
-    right: 20px; /* Adjust to move left/right */
-    font-size: 32px;
-    background: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+    position: fixed;
+    top: 15px;
+    right: 15px;
+    font-size: 28px;
+    background: rgba(0, 0, 0, 0.7);
     color: white;
     border: none;
     cursor: pointer;
-    padding: 10px 15px;
-    border-radius: 5px;
-    z-index: 10; /* Ensure it stays above the image */
+    padding: 12px;
+    border-radius: 8px;
+    z-index: 1000;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
 }
 /* Ensure the container is positioned properly */
 .container {
@@ -85,7 +86,7 @@ img {
 /* Style for Menu Links */
 .menu a {
     display: block;
-    text-align: cen; /* Align menu items */
+    text-align: center; /* Align menu items */
     color: white;
     padding: 10px;
     text-decoration: none;
@@ -95,6 +96,9 @@ img {
     color: #253dab; /* Change text color */
     text-decoration: underline; /* Add underline */
     background-color: transparent; /* Keep background unchanged */
+}
+.menu.show {
+    display: block;
 }
 
 /* Show menu in desktop view */
@@ -118,7 +122,7 @@ img {
 }
 /* Bio Section Styling */
 .bio {
-    max-width: 800;
+    max-width: 800px;
     margin: 20px auto;
     text-align: justify;
     font-size: 16px;

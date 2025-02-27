@@ -69,62 +69,81 @@ img {
 .container {
     position: relative;
 }
-/* Style for Navigation Menu */
+//* Default Menu Styles (for larger screens) */
 .menu {
-    display: none; /* Hide menu initially */
-    padding-top: 80px; /* Moves all menu items lower */
-    background-color: #333; /* Dark background */
-    padding: 6px;
-    position: absolute;
-    top: 60px;
-    left: 0;
-    width: 100%;
-    text-align: left;
-    z-index: 9;
+    display: block; /* Always visible on desktop */
+    position: static;
+    background: none;
+    text-align: center;
 }
 
-/* Style for Menu Links */
 .menu a {
-    display: block;
-    text-align: center; /* Align menu items */
-    color: white;
-    padding: 10px;
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 18px;
+    color: #333;
     text-decoration: none;
 }
 
 .menu a:hover {
-    color: #253dab; /* Change text color */
-    text-decoration: underline; /* Add underline */
-    background-color: transparent; /* Keep background unchanged */
-}
-.menu.show {
-    display: block;
+    color: #253dab;
+    text-decoration: underline;
 }
 
-/* Show menu in desktop view */
+/* ✅ Desktop View (min-width 600px) */
 @media (min-width: 600px) {
     .hamburger-menu {
-        display: none;
+        display: none; /* Hide hamburger on large screens */
     }
 
     .menu {
-        display: block;
+        display: block; /* Show menu normally */
         position: static;
-        background: none;
         text-align: center;
+    }
+}
+
+/* ✅ Mobile View (max-width 600px) */
+@media (max-width: 600px) {
+    .menu {
+        display: none; /* Hide initially */
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100vw; /* Full screen width */
+        height: 100vh; /* Full screen height */
+        background-color: rgba(0, 0, 0, 0.95); /* Darker background */
+        text-align: center;
+        padding-top: 80px;
+        margin: 0;
+        z-index: 9999;
+    }
+
+    .menu.show {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
     }
 
     .menu a {
-        display: inline-block;
-        padding: 10px;
-        color: #333;
+        display: block;
+        width: 100%;
+        padding: 15px 0;
+        font-size: 18px;
+        color: white;
+        text-decoration: none;
+    }
+
+    .menu a:hover {
+        background-color: rgba(255, 255, 255, 0.2);
     }
 }
 /* Bio Section Styling */
 .bio {
     max-width: 800px;
     margin: 20px auto;
-    text-align: justify;
+    text-align:justify;
     font-size: 16px;
     line-height: 1.6;
     color: #333;
@@ -138,8 +157,17 @@ img {
 /* Make It Responsive for Mobile */
 @media (max-width: 600px) {
     .bio {
+        text-align: justify;
+        margin-left: 0; /* Aligns it to the left */
         padding: 0 20px;
     }
+}
+.cv-container {
+    text-align: justify; /* Justify the text */
+    display: flex;
+    justify-content:left; /* Center the link */
+    align-items: center;
+    margin-top: 10px;
 }
 .cv-link {
     display: inline-block;

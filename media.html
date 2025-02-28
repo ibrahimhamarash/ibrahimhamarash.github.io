@@ -1,34 +1,31 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Media - Ibrahim Hamarash</title>
-    <link rel="stylesheet" href="profile-style.css">
-    <style>
-        .highlighted-text {
-            font-family: Comic Sans MS; /* Example Handwriting Font */
-            font-size: 16px; /* Adjust size */
-            color: #464343; /* Adjust color */
-            text-align:center;
-        }
-    </style> 
+    <title>Industry</title>
+    <!-- Link to External CSS File -->
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <div class="container">
-        <img src="images/Dr-Ibrahim-hamarash.jpg" alt="Ibrahim Hamarash, Professor of Electrical and Computer Engineering">
-        <h1 class="highlighted-text">Professor Ibrahim Ismael Hamarash</h1>
-        <h2 class="highlighted-text" >Media & Public Engagement</h2>
+        <button class="hamburger-menu" onclick="toggleMenu()" aria-expanded="false">☰</button>
+        <img src="images/Dr-Ibrahim-hamarash.jpg" alt="Ibrahim Hamarash">        
+        <h1>Professor Ibrahim Ismael Hamarash</h1>
+        <h2>In the Media</h2>
         <div class="separator"></div> <!-- Custom horizontal line -->
         <!-- Words displayed horizontally -->
-        <div class="words">
+        <!-- Hamburger Menu Button -->
+        <!-- Navigation Menu -->
+        <nav id="mobileMenu" class="menu">
             <a href="profile.html">Profile</a>
             <a href="industry.html">Industry</a>
             <a href="courses.html">Courses</a>
             <a href="publications.html">Publications</a>
             <a href="media.html">Media</a>
-        </div>
-
+        </nav>
+        <!-- Media Section -->
         <div class="video-gallery">
             <a href="https://www.youtube.com/watch?v=EIz3e8orqSg" target="_blank">
                 <img src="https://img.youtube.com/vi/EIz3e8orqSg/hqdefault.jpg" alt="YouTube Video 4">
@@ -98,16 +95,33 @@
             </a>
             
         </div>
-
-        <a href="index.html" class="back-home">← Back to Home</a>
+<!-- Back to Home Button -->
+<div class="back-home-container">
+    <a href="index.html" class="back-home-button">⬅ Back to Home</a>
+</div>
     </div>
-
     <footer class="footer">
         <p>© <span id="year"></span> Ibrahim Ismael Hamarash.</p>
     </footer>
-
+    
+    <!-- JavaScript to Auto-Update Year -->
     <script>
         document.getElementById("year").textContent = new Date().getFullYear();
     </script>
+<script>
+function toggleMenu() {
+    var menu = document.getElementById("mobileMenu");
+    var hamburger = document.querySelector(".hamburger-menu");
+
+    menu.classList.toggle("show");
+
+    // ✅ Update the accessibility attribute
+    let isExpanded = menu.classList.contains("show");
+    hamburger.setAttribute("aria-expanded", isExpanded ? "true" : "false");
+
+    // ✅ Ensure the hamburger menu stays above the menu
+    hamburger.style.zIndex = isExpanded ? "10001" : "10000";
+}
+</script>
 </body>
 </html>

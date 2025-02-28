@@ -3,65 +3,59 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Profile - Ibrahim Hamarash</title>
-    <link rel="stylesheet" href="profile-style.css">
-    <style>
-        .highlighted-text {
-            font-family: Comic Sans MS; /* Example Handwriting Font */
-            font-size: 16px; /* Adjust size */
-            color: #464343; /* Adjust color */
-            text-align:center;
-        }
-    </style> 
+    <title>Ibrahim Hamarash_Profile</title>
+    <!-- Link to External CSS File -->
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <div class="container">
-            <img src="images/Dr-Ibrahim-hamarash.jpg" alt="Ibrahim Hamarash, Professor of Electrical and Computer Engineering">
-            <h1 class="highlighted-text">Professor Ibrahim Ismael Hamarash</h1>
-            <h2 class="highlighted-text" >Academic & Professional Profile</h2>
-            <div class="separator"></div> <!-- Custom horizontal line -->
-            <!-- Words displayed horizontally -->
-            <div class="words">
-                <a href="profile.html">Profile</a>
-                <a href="industry.html">Industry</a>
-                <a href="courses.html">Courses</a>
-                <a href="publications.html">Publications</a>
-                <a href="media.html">Media</a>
-            </div>
-             <!-- Bio Section -->
-
+        <button class="hamburger-menu" onclick="toggleMenu()" aria-expanded="false">☰</button>
+        <img src="images/Dr-Ibrahim-hamarash.jpg" alt="Ibrahim Hamarash">        
+        <h1>Professor Ibrahim Ismael Hamarash</h1>
+        <h2>Academic & Professional Profile</h2>
+        <div class="separator"></div> <!-- Custom horizontal line -->
+        <!-- Words displayed horizontally -->
+        <!-- Hamburger Menu Button -->
+        <!-- Navigation Menu -->
+        <nav id="mobileMenu" class="menu">
+            <a href="profile.html">Profile</a>
+            <a href="industry.html">Industry</a>
+            <a href="courses.html">Courses</a>
+            <a href="publications.html">Publications</a>
+            <a href="media.html">Media</a>
+        </nav>
+    <!-- Content section (Bio Section in css) -->
+    <div class="bio">
         <h2>EDUCATION</h2>
         <ul>
-            <li>BSc in Electronics and Communication Engineering (1988)-Salahaddin University-Erbil</li>
-            <li>MSc in Control Systems Engineering(1993)-Mosul University</li>
-            <li>MRes in Computer Science(2020)-Staffordshire University (UK)</li>
-            <li>PhD in Control Systems Engineering(1999)-The University of Technology-Baghdad</li>
+            <li>BSc in Electrical Engineering (Electronics and Communication) – Salahaddin University-Erbil, 1988</li>
+            <li>MSc in Electrical Engineering (Control Systems) – Mosul University, 1993</li>
+            <li>MRes in Computing Science (Artificial Intelligence) – Staffordshire University (UK), 2020</li>
+            <li>PhD in Electrical Engineering (Control Systems) – The University of Technology-Baghdad, 1999</li>
         </ul>
         <h2>POSTDOCTORAL RESEARCH</h2>
         <ul>
            <li>Postdoctoral Research in Control Systems(2007)– Monash University, Australia</li>
-           <li>Recipient of the Endeavour Medal from the Australian Government</li>
         </ul>
-        <h2>ACADEMIC CERTIFICATES, HONORS & AWARDS</h2>
+        <h2>HONORS & AWARDS</h2>
         <ul>
-            <li><strong>Endeavour Executive Award</strong>, 2015, Melbourne, Australian Government</li>
-            <li><strong>Academic Leadership</strong>, Leadership Foundation for Higher Education, 2011, Nottingham, UK</li>
+            <li><strong>Endeavour Medal</strong>, 2007, A prestigious research award from the Australian Government</li>
+            <li><strong>Academic Leadership Certificate</strong>, Leadership Foundation for Higher Education, 2011, Nottingham, UK</li>
             <li><strong>ICT Project Management Certificate</strong>, 2005, Beyster Institute, Rady School of Management, University of California in San Diego, CA, USA</li>
         </ul>
         <h2>RESEARCH INTERESTS</h2>
 <ul>
-    <li>Control and Computer Systems</li>
-    <li>AI</li>
+    <li>Control Systems and Computer Engineering</li>
+    <li>AI & Machine Learning</li>
     <li>Robotics</li>
-    <li>Information Systems</li>
-    <li>Nonlinearities</li>
     <li>Software Design and Architecture</li>
-    <li>Machine Learning</li>
+    <li>Power Systems Control</li>
+    <li>Digital Twins</li>
 </ul>
         <h2>EMPLOYMENT HISTORY</h2>
 <ul>
     <li><strong>2013-Present:</strong> Professor at Salahaddin University-Erbil (Tenure).</li>
-    <li><strong>2023-2025:</strong> Adjunct Professor at the University of Kurdistan Hewler.</li>
+    <li><strong>2023-Present:</strong> Adjunct Professor at the University of Kurdistan Hewler.</li>
     <li><strong>2018-2023:</strong> Professor at the University of Kurdistan Hewler.</li>
     <li><strong>2017-2018:</strong> Dean of Engineering, Salahaddin University-Erbil, Kurdistan, Iraq.</li>
     <li><strong>2010-2017:</strong> Vice President for Scientific Affairs and Postgraduate Studies, Salahaddin University-Erbil, Kurdistan, Iraq.</li>
@@ -194,13 +188,33 @@
         <li>My <a href="https://scholar.google.com/citations?user=2WDCYXAAAAAJ&hl=en&authuser=1" target="_blank">Google Scholar</a>.</li>
     
     </div>
+ <!-- Back to Home Button -->
+<div class="back-home-container">
+    <a href="index.html" class="back-home-button">⬅ Back to Home</a>
+</div>
+    </div>
     <footer class="footer">
-        <a href="index.html" class="back-home">← Back to Home</a>
         <p>© <span id="year"></span> Ibrahim Ismael Hamarash.</p>
     </footer>
-
+    
+    <!-- JavaScript to Auto-Update Year -->
     <script>
         document.getElementById("year").textContent = new Date().getFullYear();
     </script>
+<script>
+function toggleMenu() {
+    var menu = document.getElementById("mobileMenu");
+    var hamburger = document.querySelector(".hamburger-menu");
+
+    menu.classList.toggle("show");
+
+    // ✅ Update the accessibility attribute
+    let isExpanded = menu.classList.contains("show");
+    hamburger.setAttribute("aria-expanded", isExpanded ? "true" : "false");
+
+    // ✅ Ensure the hamburger menu stays above the menu
+    hamburger.style.zIndex = isExpanded ? "10001" : "10000";
+}
+</script>   
 </body>
 </html>

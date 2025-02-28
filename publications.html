@@ -1,34 +1,33 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Publications - Ibrahim Hamarash</title>
-    <link rel="stylesheet" href="profile-style.css">
-    <style>
-        .highlighted-text {
-            font-family: Comic Sans MS; /* Example Handwriting Font */
-            font-size: 16px; /* Adjust size */
-            color: #464343; /* Adjust color */
-            text-align:center;
-        }
-    </style> 
+    <title>Ibrahim Hamarash_publications</title>
+    <!-- Link to External CSS File -->
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <div class="container">
-            <img src="images/Dr-Ibrahim-hamarash.jpg" alt="Ibrahim Hamarash, Professor of Electrical and Computer Engineering">
-            <h1 class="highlighted-text">Professor Ibrahim Ismael Hamarash</h1>
-            <h2 class="highlighted-text" ><strong>Publications</strong></h2>
-            <div class="separator"></div> <!-- Custom horizontal line -->
-            <!-- Words displayed horizontally -->
-            <div class="words">
-                <a href="profile.html">Profile</a>
-                <a href="industry.html">Industry</a>
-                <a href="courses.html">Courses</a>
-                <a href="publications.html">Publications</a>
-                <a href="media.html">Media</a>
-            </div>
-             <!-- Bio Section -->
+        <button class="hamburger-menu" onclick="toggleMenu()" aria-expanded="false">☰</button>
+        <img src="images/Dr-Ibrahim-hamarash.jpg" alt="Ibrahim Hamarash">        
+        <h1>Professor Ibrahim Ismael Hamarash</h1>
+        <h2>Publications</h2>
+        <div class="separator"></div> <!-- Custom horizontal line -->
+        <!-- Words displayed horizontally -->
+        <!-- Hamburger Menu Button -->
+        <!-- Navigation Menu -->
+        <nav id="mobileMenu" class="menu">
+            <a href="profile.html">Profile</a>
+            <a href="industry.html">Industry</a>
+            <a href="courses.html">Courses</a>
+            <a href="publications.html">Publications</a>
+            <a href="media.html">Media</a>
+        </nav
+
+            <!-- Bio Section -->
+            <div class="bio">
              <h2>Published Papers</h2>
              <ol>
                  <li>Ibrahim Hamarash and Yara Moayad, Enhanced Human Activity Recognition (HAR) with IMU Sensors in Smartphones: Insights from Machine Learning Models. Zanco Journal for Pure and Applied Sciences. Accepted for publication.</li>
@@ -87,14 +86,34 @@
                     <li>Ibrahim Ismael Hamarash & Amin Abbas,” A Computer Aided Design For Root-Locus Plotting”, Proc. of Scientific Conf., 3-4 June 1997, Erbil, PP.193-198.</li>
                     <li>Ibrahim Ismael Hamarash & Ali Husain,” A Flexible Algorithm For Pole Assignment Synthesis Using State Feedback Controller”, Engineering and Technology- Baghdad, Vol, No. PP. 1994.</li>
                 </ol>
-
-             <a href="index.html" class="back-home">← Back to Home</a>  
+            </div>
+        <!-- Back to Home Button -->
+<div class="back-home-container">
+    <a href="index.html" class="back-home-button">⬅ Back to Home</a>
+</div>
+    </div>
     <footer class="footer">
         <p>© <span id="year"></span> Ibrahim Ismael Hamarash.</p>
     </footer>
-
+    
+    <!-- JavaScript to Auto-Update Year -->
     <script>
         document.getElementById("year").textContent = new Date().getFullYear();
     </script>
+<script>
+function toggleMenu() {
+    var menu = document.getElementById("mobileMenu");
+    var hamburger = document.querySelector(".hamburger-menu");
+
+    menu.classList.toggle("show");
+
+    // ✅ Update the accessibility attribute
+    let isExpanded = menu.classList.contains("show");
+    hamburger.setAttribute("aria-expanded", isExpanded ? "true" : "false");
+
+    // ✅ Ensure the hamburger menu stays above the menu
+    hamburger.style.zIndex = isExpanded ? "10001" : "10000";
+}
+</script>   
 </body>
 </html>

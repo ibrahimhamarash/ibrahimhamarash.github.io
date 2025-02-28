@@ -1,6 +1,6 @@
 /* General Page Styling */
 body {
-    font-family: Comic Sans MS;
+    font-family: Arial, Helvetica, sans-serif;;
     font-size: 16px !important;
     text-align: center;
     margin: 0;
@@ -33,6 +33,7 @@ h2 {
     background: white;
     box-shadow: 0px 0px 10px gray;
     flex-grow: 1; /* Makes it expand to fill space */
+    position: relative;
 }
 
 /* Image Styling */
@@ -60,15 +61,11 @@ img {
     color: white;
     border: none;
     cursor: pointer;
-    padding: 12px;
+    padding: 12px 15px;
     border-radius: 8px;
     z-index: 10000; /* ✅ Keep it above everything */
 }
-/* Ensure the container is positioned properly */
-.container {
-    position: relative;
-}
-//* Default Menu Styles (for larger screens) */
+/* Default Menu Styles (for larger screens) */
 .menu {
     display: block; /* Always visible on desktop */
     position: static;

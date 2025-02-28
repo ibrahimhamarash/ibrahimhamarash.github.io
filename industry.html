@@ -9,8 +9,8 @@
 </head>
 <body>
     <div class="container">
-        <button class="hamburger-menu" onclick="toggleMenu()">☰</button>
-        <img src="images/Dr-Ibrahim-hamarash.jpg" alt="Ibrahim Hamarash, Professor of Electrical and Computer Engineering">        
+        <button class="hamburger-menu" onclick="toggleMenu()" aria-expanded="false">☰</button>
+        <img src="images/Dr-Ibrahim-hamarash.jpg" alt="Ibrahim Hamarash">        
         <h1>Professor Ibrahim Ismael Hamarash</h1>
         <h2>Industrial Experience</h2>
         <div class="separator"></div> <!-- Custom horizontal line -->
@@ -25,7 +25,21 @@
             <a href="media.html">Media</a>
         </nav>
          
-            
+       <!-- Industry Experience Section -->
+       <div class="bio">
+        <h3>Industry Experience</h3>
+        <ul>
+            <li><strong>Designer & Builder (2010):</strong> Mobile Education Center for Regenerative Energy and Automation, in collaboration with the University of Applied Sciences-Karlsruhe, Germany.</li>
+            <li><strong>Designer and Project Manager (2006):</strong> e-Parliament Project – Led hardware and software design, installation, deployment, and training for the Kurdistan Parliament, in partnership with B-Plan Information Systems Ltd. (UK).</li>
+            <li><strong>Localization Lead (2005):</strong> Ifraz Water Station Operation Manuals – Translated and adapted operational manuals into Kurdish for the newly installed Ifraz Water Station in Erbil (Kurdistan, Iraq) on behalf of Goulds Pumps (USA) and Agenew (USA).</li>
+            <li><strong>System Architect & Developer (2005):</strong> PERIS: HR and Payroll System – Conducted system analysis, software architecture and design, localization, database design, implementation, manual development, and training, in collaboration with B-Plan IS Ltd. (UK) for the Ministry of Education, Erbil, Kurdistan, Iraq.</li>
+            <li><strong>Designer and Project Manager (2004-2005):</strong> ICT Infrastructure Development & Installation – Led the development and installation of ICT infrastructure for the Ministry of Education, Kurdistan, Iraq, in partnership with B-Plan IS Ltd. (UK).</li>
+            <li><strong>Project Manager and Curriculum Designer (2002):</strong> IT Conversion Course for High School Teachers – Managed a three-month training program for 600 high school teachers in the Kurdistan Region, implemented for UNESCO and the Ministry of Education, KRG, Erbil, Kurdistan.</li>
+            <li><strong>Electrical & Control Systems Designer (2001):</strong> Azmr-Sulaimani Substation Rehabilitation – Designed all electrical and control systems for the substation rehabilitation, working with Zozik Ltd. and UNDP, Erbil.</li>
+            <li><strong>Control & Wiring Designer (2001):</strong> Chambarakat-Duhok Water Station – Designed PLC, control, and wiring systems for the station in collaboration with UNICEF, Erbil (with Dr. Kamal Haji Nabi).</li>
+            <li><strong>Data Analyst & Documentation Specialist (2000):</strong> Erbil 29 MW Power Station Project – Led data collection, analysis, visualization, and documentation in collaboration with the Engineering Bureau of the College of Engineering and UNDP.</li>
+        </ul>
+    </div>     
     </div>
     <footer class="footer">
         <p>© <span id="year"></span> Ibrahim Ismael Hamarash.</p>
@@ -37,17 +51,18 @@
     </script>
     <script>
     function toggleMenu() {
-        var menu = document.getElementById("mobileMenu");
-        menu.classList.toggle("show");
+    var menu = document.getElementById("mobileMenu");
+    var hamburger = document.querySelector(".hamburger-menu");
 
-        // ✅ Ensure the hamburger menu remains visible
-        var hamburger = document.querySelector(".hamburger-menu");
-        if (menu.classList.contains("show")) {
-            hamburger.style.zIndex = "10001"; /* Bring it above menu */
-        } else {
-            hamburger.style.zIndex = "10000"; /* Keep it high */
-        }
-    }
+    menu.classList.toggle("show");
+
+    // ✅ Update the accessibility attribute
+    let isExpanded = menu.classList.contains("show");
+    hamburger.setAttribute("aria-expanded", isExpanded ? "true" : "false");
+
+    // ✅ Ensure the hamburger menu stays above the menu
+    hamburger.style.zIndex = isExpanded ? "10001" : "10000";
+}
 </script>
 </script>
 </body>

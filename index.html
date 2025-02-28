@@ -9,8 +9,8 @@
 </head>
 <body>
     <div class="container">
-        <button class="hamburger-menu" onclick="toggleMenu()">☰</button>
-        <img src="images/Dr-Ibrahim-hamarash.jpg" alt="Ibrahim Hamarash, Professor of Electrical and Computer Engineering">        
+        <button class="hamburger-menu" onclick="toggleMenu()" aria-expanded="false">☰</button>
+        <img src="images/Dr-Ibrahim-hamarash.jpg" alt="Ibrahim Hamarash">        
         <h1>Professor Ibrahim Ismael Hamarash</h1>
         <h2>My Academic Space</h2>
         <div class="separator"></div> <!-- Custom horizontal line -->
@@ -43,18 +43,18 @@
     </script>
     <script>
     function toggleMenu() {
-        var menu = document.getElementById("mobileMenu");
-        menu.classList.toggle("show");
+    var menu = document.getElementById("mobileMenu");
+    var hamburger = document.querySelector(".hamburger-menu");
 
-        // ✅ Ensure the hamburger menu remains visible
-        var hamburger = document.querySelector(".hamburger-menu");
-        if (menu.classList.contains("show")) {
-            hamburger.style.zIndex = "10001"; /* Bring it above menu */
-        } else {
-            hamburger.style.zIndex = "10000"; /* Keep it high */
-        }
-    }
-</script>
+    menu.classList.toggle("show");
+
+    // ✅ Update the accessibility attribute
+    let isExpanded = menu.classList.contains("show");
+    hamburger.setAttribute("aria-expanded", isExpanded ? "true" : "false");
+
+    // ✅ Ensure the hamburger menu stays above the menu
+    hamburger.style.zIndex = isExpanded ? "10001" : "10000";
+}
 </script>
 </body>
 </html>

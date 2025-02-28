@@ -144,6 +144,7 @@ img {
     font-size: 16px;
     line-height: 1.6;
     color: #333;
+    padding: 10px; /* Reduce padding */
 }
 
 /* Style Paragraphs for Better Readability */
@@ -180,4 +181,8 @@ img {
 
 .cv-link:hover {
     background-color: #005bb5;
+}
+.back-home-button:hover {
+    color: #ffcc00; /* Changes text color to yellow */
+    font-size: 16px; /* Slightly increases font size */
 }

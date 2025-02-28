@@ -12,7 +12,7 @@
         <button class="hamburger-menu" onclick="toggleMenu()" aria-expanded="false">☰</button>
         <img src="images/Dr-Ibrahim-hamarash.jpg" alt="Ibrahim Hamarash">        
         <h1>Professor Ibrahim Ismael Hamarash</h1>
-        <h2>Industrial Experience</h2>
+        <h2>industry Experience</h2>
         <div class="separator"></div> <!-- Custom horizontal line -->
         <!-- Words displayed horizontally -->
         <!-- Hamburger Menu Button -->
@@ -39,7 +39,11 @@
             <li><strong>Control & Wiring Designer (2001):</strong> Chambarakat-Duhok Water Station – Designed PLC, control, and wiring systems for the station in collaboration with UNICEF, Erbil (with Dr. Kamal Haji Nabi).</li>
             <li><strong>Data Analyst & Documentation Specialist (2000):</strong> Erbil 29 MW Power Station Project – Led data collection, analysis, visualization, and documentation in collaboration with the Engineering Bureau of the College of Engineering and UNDP.</li>
         </ul>
-    </div>     
+    </div>
+<!-- Back to Home Button -->
+<div class="back-home-container">
+    <a href="index.html" class="back-home-button">⬅ Back to Home</a>
+</div>
     </div>
     <footer class="footer">
         <p>© <span id="year"></span> Ibrahim Ismael Hamarash.</p>
@@ -49,8 +53,8 @@
     <script>
         document.getElementById("year").textContent = new Date().getFullYear();
     </script>
-    <script>
-    function toggleMenu() {
+<script>
+function toggleMenu() {
     var menu = document.getElementById("mobileMenu");
     var hamburger = document.querySelector(".hamburger-menu");
 
@@ -63,7 +67,6 @@
     // ✅ Ensure the hamburger menu stays above the menu
     hamburger.style.zIndex = isExpanded ? "10001" : "10000";
 }
-</script>
 </script>
 </body>
 </html>

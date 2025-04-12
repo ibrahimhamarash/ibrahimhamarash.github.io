@@ -41,21 +41,23 @@
     <script>
         document.getElementById("year").textContent = new Date().getFullYear();
     </script>
-    <script>
+<script>
     function toggleMenu() {
     var menu = document.getElementById("mobileMenu");
     var hamburger = document.querySelector(".hamburger-menu");
 
     menu.classList.toggle("show");
 
-    // ✅ Update the accessibility attribute
+    // Update the accessibility attribute
     let isExpanded = menu.classList.contains("show");
     hamburger.setAttribute("aria-expanded", isExpanded ? "true" : "false");
 
-    // ✅ Ensure the hamburger menu stays above the menu
+    // Ensure the hamburger menu stays above the menu
     hamburger.style.zIndex = isExpanded ? "10001" : "10000";
     <!-- Back to Home Button -->
+    // this is a comment
 }
 </script>
 </body>
 </html>
+

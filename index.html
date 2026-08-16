@@ -4,13 +4,17 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Ibrahim Hamarash_My Website</title>
+    <!-- Google Roboto Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
     <!-- Link to External CSS File -->
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <div class="container">
         <button class="hamburger-menu" onclick="toggleMenu()" aria-expanded="false">☰</button>
-        <img src="images/Ibrahim_hamarash.jpg" alt="Ibrahim Hamarash">        
+        <img src="images/Dr-ibrahim-hamarash.jpg" alt="Ibrahim Hamarash">        
         <h1>Professor Ibrahim Ismael Hamarash</h1>
         <h2>My Academic Space</h2>
         <div class="separator"></div> <!-- Custom horizontal line -->
@@ -37,27 +41,8 @@
         <p>© <span id="year"></span> Ibrahim Ismael Hamarash.</p>
     </footer>
     
-    <!-- JavaScript to Auto-Update Year -->
-    <script>
-        document.getElementById("year").textContent = new Date().getFullYear();
-    </script>
-<script>
-    function toggleMenu() {
-    var menu = document.getElementById("mobileMenu");
-    var hamburger = document.querySelector(".hamburger-menu");
+    <script src="script.js"></script>
 
-    menu.classList.toggle("show");
-
-    // Update the accessibility attribute
-    let isExpanded = menu.classList.contains("show");
-    hamburger.setAttribute("aria-expanded", isExpanded ? "true" : "false");
-
-    // Ensure the hamburger menu stays above the menu
-    hamburger.style.zIndex = isExpanded ? "10001" : "10000";
-    <!-- Back to Home Button -->
-    // this is a comment
-}
-</script>
 </body>
 </html>
 
